@@ -1,106 +1,129 @@
-🚀 OfferBridge – Credit Card Rewards Marketplace
+# 🚀 OfferBridge
 
-OfferBridge is a peer-to-peer marketplace that enables credit card holders to monetize their unused rewards, cashback, and exclusive offers while helping buyers save money on purchases through secure, escrow-based transactions.
+> A secure peer-to-peer marketplace that enables users to monetize unused credit card rewards while helping others save money through verified card offers and escrow-based transactions.
 
-🌐 Live Demo: https://www.gozivo.in
+<p align="center">
+  <a href="https://www.gozivo.in">
+    <img src="https://img.shields.io/badge/Live-gozivo.in-blue?style=for-the-badge" />
+  </a>
+  <img src="https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=nextdotjs" />
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react" />
+  <img src="https://img.shields.io/badge/MongoDB-Atlas-47A248?style=for-the-badge&logo=mongodb" />
+  <img src="https://img.shields.io/badge/TailwindCSS-3-38B2AC?style=for-the-badge&logo=tailwindcss" />
+</p>
 
-📌 Overview
+---
 
-Credit card holders often have valuable offers that expire unused, while many shoppers miss out on discounts because they don't own eligible cards.
+# 📖 Overview
 
-OfferBridge bridges this gap by creating a secure marketplace where:
+OfferBridge is a marketplace where credit card holders can earn money by sharing their unused cashback, reward points, and exclusive card offers.
 
-💳 Cardholders can earn by sharing their card benefits.
-🛍️ Buyers can access exclusive discounts and cashback.
-🔒 Transactions are protected using an escrow-based payment system.
-✨ Features
-👤 Buyer
-Create purchase requests
-Browse available card offers
-Secure escrow payment system
-Real-time order tracking
-Instant notifications
-View transaction history
-💳 Cardholder
-List credit card offers
-Accept buyer requests
-Manage active transactions
-Earn commission on completed orders
-Dashboard with transaction history
-🛠 Admin
-User management
-Transaction monitoring
-Marketplace analytics
-Dispute handling
-Platform overview
-⚙️ How It Works
-Buyer Flow
-Register an account
-Create a purchase request
-Browse matching card offers
-Select the best offer
-Deposit payment into escrow
-Track the order
-Confirm delivery
-Cardholder Flow
-Register and verify account
-Add credit card information
-Publish available offers
-Accept buyer requests
-Complete the purchase using the card
-Upload tracking details
-Receive payment after successful completion
-🔄 Transaction Flow
+Buyers who don't own premium cards can securely access these discounts through an escrow-based transaction system.
+
+The platform provides:
+
+- 💳 Secure escrow payments
+- 🔒 Verified users
+- ⚡ Real-time transaction tracking
+- 📈 Transparent marketplace
+- 🤝 Fair matching between buyers and cardholders
+
+---
+
+# ✨ Features
+
+## 👤 Buyer
+
+- Create purchase requests
+- Browse available offers
+- Secure escrow payment
+- Live order tracking
+- Transaction history
+- Instant notifications
+
+---
+
+## 💳 Cardholder
+
+- Publish card offers
+- Accept purchase requests
+- Manage active transactions
+- Earn commissions
+- Dashboard & analytics
+
+---
+
+## 🛠 Admin
+
+- User management
+- Transaction monitoring
+- Marketplace analytics
+- Dispute handling
+- Revenue dashboard
+
+---
+
+# 🔄 Workflow
+
+```text
 Buyer
    │
-Create Request
+   ▼
+Create Purchase Request
    │
-Choose Card Offer
+   ▼
+Browse Card Offers
    │
-Deposit Payment (Escrow)
+   ▼
+Choose Best Offer
    │
+   ▼
+Escrow Payment
+   │
+   ▼
 Cardholder Purchases Item
    │
+   ▼
 Tracking Details Shared
    │
+   ▼
 Buyer Confirms Delivery
    │
-Escrow Releases Payment
-🛠 Tech Stack
-Frontend
-Next.js
-React
-Tailwind CSS
-Framer Motion
-Recharts
-Backend
-Node.js
-Next.js API Routes
-Database
-MongoDB Atlas
-Mongoose
-Authentication
-NextAuth.js
-JWT
-Google OAuth
-GitHub OAuth
-Payments
-Stripe
-Other Tools
-SendGrid
-WebSockets
-Git
-GitHub
-Vercel
-🔐 Security
-JWT Authentication
-Password hashing using bcrypt
-Role-Based Access Control (RBAC)
-HTTPS
-Environment variable management
-Input validation
-Secure session handling
-📂 Project Structure
+   ▼
+Payment Released
+```
+
+---
+
+# 🛠 Tech Stack
+
+| Category | Technologies |
+|-----------|--------------|
+| Frontend | Next.js, React, Tailwind CSS, Framer Motion |
+| Backend | Node.js, Next.js API Routes |
+| Database | MongoDB Atlas |
+| Authentication | NextAuth.js, JWT, Google OAuth, GitHub OAuth |
+| Payments | Stripe |
+| Notifications | WebSockets, SendGrid |
+| Deployment | Vercel |
+
+---
+
+# 🔐 Security
+
+- JWT Authentication
+- Role Based Access Control (RBAC)
+- Password Hashing (bcrypt)
+- HTTPS Encryption
+- Secure Session Management
+- Input Validation
+- Environment Variables
+
+---
+
+# 📂 Folder Structure
+
+```text
 src
 │
 ├── app
@@ -118,74 +141,134 @@ src
 │   ├── prosumer
 │   └── shared
 │
-├── lib
-│   ├── api.js
-│   ├── authContext.js
-│   ├── config.js
-│   ├── logger.js
-│   ├── models.js
-│   └── mongodb.js
-🚀 Getting Started
-Clone the repository
+└── lib
+    ├── api.js
+    ├── authContext.js
+    ├── config.js
+    ├── logger.js
+    ├── models.js
+    └── mongodb.js
+```
+
+---
+
+# 🚀 Getting Started
+
+### Clone the repository
+
+```bash
 git clone https://github.com/yourusername/OfferBridge.git
-Navigate to the project
+```
+
+### Navigate into the project
+
+```bash
 cd OfferBridge
-Install dependencies
+```
+
+### Install dependencies
+
+```bash
 npm install
-Create a .env.local
+```
+
+### Configure environment variables
+
+Create a `.env.local` file:
+
+```env
 MONGODB_URI=
+
 NEXTAUTH_SECRET=
+
 GOOGLE_CLIENT_ID=
 GOOGLE_CLIENT_SECRET=
+
 GITHUB_CLIENT_ID=
 GITHUB_CLIENT_SECRET=
+
 STRIPE_SECRET_KEY=
+
 SENDGRID_API_KEY=
-Run the project
+```
+
+### Start the development server
+
+```bash
 npm run dev
+```
 
-Visit
+Visit:
 
+```
 http://localhost:3000
-📡 API Routes
-Authentication
+```
+
+---
+
+# 📡 API
+
+## Authentication
+
+```
 POST /api/auth
-GET /api/auth/[...nextauth]
-Requests & Offers
+GET  /api/auth/[...nextauth]
+```
+
+## Data
+
+```
 GET    /api/data
 POST   /api/data
 PATCH  /api/data
 DELETE /api/data
-Payments
+```
+
+## Payments
+
+```
 GET  /api/payment
 POST /api/payment
 PUT  /api/payment
-Notifications
-GET   /api/notifications
-PATCH /api/notifications
-📈 Future Enhancements
-📱 Android & iOS apps
-🤖 AI-powered offer matching
-🌍 Multi-currency support
-📊 Advanced analytics dashboard
-🔔 Push notifications
-💬 In-app messaging
-🌐 International expansion
-🤝 Contributing
+```
 
-Contributions are welcome!
+---
 
-Fork the repository
-Create a feature branch
-Commit your changes
-Push your branch
-Open a Pull Request
-📄 License
+# 🌱 Future Improvements
 
-This project is licensed under the MIT License.
+- 📱 Android & iOS App
+- 🤖 AI-powered offer recommendations
+- 🌍 Multi-currency support
+- 📊 Advanced analytics
+- 💬 In-app messaging
+- 🔔 Push notifications
 
-👨‍💻 Author
+---
 
-GoZivo Team
+# 🤝 Contributing
+
+Contributions are always welcome!
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push your branch
+5. Open a Pull Request
+
+---
+
+# 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+# 👨‍💻 Developed By
+
+**GoZivo Team**
 
 🌐 https://www.gozivo.in
+
+---
+
+⭐ If you found this project useful, don't forget to give it a **Star**!
